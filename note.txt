@@ -1,0 +1,23 @@
+const account2 = JSON.parse(JSON.stringify(account)) -
+полное копирование объекта для избежания мутаций (если в объекте функции почему то не работает)
+
+const updatedPerson = Object.assign({}, person) - копирование объекта person
+
+Функция без return вернет undefined (Была у меня такая грабля уже)
+
+Преобразование объекта в массив:
+
+const myObject = {
+  Father: 'Taras',
+  Mother: 'Tatyana',
+  Child: 'Nastya'
+}
+
+Object.keys(myObject).map(value => {
+  console.log(value)
+})
+
+результат:
+Father
+Mother
+Child
