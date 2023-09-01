@@ -132,6 +132,8 @@ const filterRange = (arr, a, b) => {
 console.log(filterRange(arr, 1, 4))
 */
 
+
+/*Создание массива по значению ключа из объектов.
 let vasya = { name: "Вася", age: 25 };
 let petya = { name: "Петя", age: 30 };
 let masha = { name: "Маша", age: 28 };
@@ -147,3 +149,48 @@ let names = () => {
 console.log(names())
 
 [ 'Вася', 'Петя', 'Маша' ]
+
+или let names = users.map(item => item.name); решение от школы*/
+
+
+/* Создание нового массива объектов из объектов другого массива. Трансформировать в объекты
+let vasya = { name: "Вася", surname: "Пупкин", id: 1 };
+let petya = { name: "Петя", surname: "Иванов", id: 2 };
+let masha = { name: "Маша", surname: "Петрова", id: 3 };
+
+let users = [ vasya, petya, masha ];
+
+let usersMapped = users.map(user => ({fullName: `${user.name} ${user.surname}`, id: user.id}))
+console.log(usersMapped) */
+
+
+/* Получаем средний возраст
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 29 };
+
+let arr = [ vasya, petya, masha ];
+
+let arrAge = () =>{
+    let result = ''
+    for(i = 0; i < arr.length; i++) {
+        result = (+result + arr[i].age)
+    }
+    return result / arr.length
+}
+console.log(arrAge())*/
+
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 28 };
+
+let arr = [ vasya, petya, masha ];
+
+const sortByAge = (arr) => {
+    let result = []
+    for(i = 0; i < arr.length; i++) {
+        result = arr.age.sort((a, b) => a < b)
+    }
+    return result
+}
+console.log(sortByAge(arr))
